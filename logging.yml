@@ -1,0 +1,18 @@
+version: 1
+formatters:
+  default:
+    format: '%(asctime)s %(name)s.%(levelname)s - %(message)s'
+    datefmt: '%Y-%m-%d %H:%M:%S'
+
+handlers:
+  sestertius_default:
+    class: logging.handlers.RotatingFileHandler
+    filename: logs/sestertius.log
+    maxBytes: 2048
+    formatter: default
+    level: DEBUG
+
+loggers:
+  core.sestertius:
+    level: DEBUG
+    handlers: [sestertius_default]

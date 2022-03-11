@@ -1,0 +1,33 @@
+exchanges:
+  loopring:
+    enable      : True
+    acc_addr    : 
+    acc_id      : 
+    api_key     : 
+    priv_key    : 
+    validuntill : 200
+    maxfeebips  :
+
+# Sestertius - MarketMaker
+strategies:
+  marketmaker:
+    enable        : True
+    exchange      : loopring
+    interval      : 10
+    pair          : LRC-ETH
+    volume        : 0.1
+    spread        : 1
+    levels        : [1,1,1,1,1,1]
+    maxprice      :
+    minprice      :
+    stoploss      :
+    renew_scalper : 2
+
+  # Sestertius - Arbitrage
+  arbitrage:
+    enable    : False
+    interval  :
+    tickers   : []
+
+  rebalancing:
+    enable    : False
